@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonata - Luxury Watches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://png.pngtree.com/png-vector/20190429/ourmid/pngtree-business-corporate-s-letter-logo-png-image_996575.jpg" alt="Sonata Logo" class="logo-img">
+                <span class="sonata-text sonata-textani" style="--p:0">Sonata</span>
+            </div>
+            <ul class="nav-links menu menu-2">
+                <li><a href="#landing-page" class="scroll-link">HOME</a></li>
+                <li><a href="#featured-collections" class="scroll-link">PRODUCT</a></li>
+                <li><a href="#shop-by-collection" class="scroll-link">COLLECTION</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#pages">PAGES</a></li>
+            </ul>
+            <div class="icons">
+                <button class="search-toggle"><i class="fas fa-search"></i></button>
+                <button class="account-toggle" id="accountToggle"><i class="fas fa-user"></i></button>
+                <a href="#cart" class="icon-cart"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search" class="search-input">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+   
+    <div id="loginSignupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-left">
+                <!-- <img src="https://www.sonatawatches.in/on/demandware.static/-/Library-Sites-SonataSharedLibrary/default/dwd9684441/images/menu-men-1.jpg" alt="Sonata Watch"> -->
+                <img src="https://www.sonatawatches.in/on/demandware.static/-/Library-Sites-SonataSharedLibrary/default/dw3fcd163d/images/Menu-ShopFor-1.jpg" alt="Sonata Watch">
+
+            </div>
+            <div class="modal-right">
+                <div class="tab-container">
+                    <button class="tab-button active" data-tab="login">Login</button>
+                    <button class="tab-button" data-tab="signup">Sign Up</button>
+                </div>
+                <div id="loginForm" class="form-container active">
+                    <h2>Login</h2>
+                    <form>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                    <div class="social-login">
+                        <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+                </div>
+                <div id="signupForm" class="form-container">
+                    <h2>Sign Up</h2>
+                    <form>
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <input type="password" placeholder="Confirm Password" required>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="landing-page" class="animate-section">
+            <div class="landing-content">
+                <h1 id="wrist-timer-welcome-note">WELCOME TO <span id="wrist-timer">WRIST TIMER</span></h1>
+                <h2>Rare Collection <span class="year">2024</span></h2>
+                <p>Elevate your style with Sonata: timeless elegance, flawless precision. Embrace every moment with a masterpiece on your wrist.</p>
+                <button class="read-more">READ MORE</button>
+            </div>
+        </section>
+
+        <section id="hero" class="slider animate-section scrollup-animation">
+            <div class="slide active">
+                <img src="https://i.ytimg.com/vi/vnhHVJTKXUo/maxresdefault.jpg" alt="Luxury Watch 1">
+                <div class="slide-content">
+                    <h1>GET YOUR NEW EDITION WATCH</h1>
+                    <p>Extra 15% off with code TINTCN20</p>
+                    <button class="shop-now">SHOP NOW</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://thehardcopy.co/wp-content/uploads/Sonata-768x562.jpg" alt="Luxury Watch 2">
+                <div class="slide-content">
+                    <h1>DISCOVER LUXURY TIMEPIECES</h1>
+                    <p>Elegance on your wrist</p>
+                    <button class="shop-now">EXPLORE</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://www.shutterstock.com/image-photo/black-luxury-watch-on-coals-600nw-1914091201.jpg" alt="Luxury Watch 3">
+                <div class="slide-content">
+                    <h1>SMARTWATCHES FOR THE MODERN ERA</h1>
+                    <p>Technology meets style</p>
+                    <button class="shop-now">LEARN MORE</button>
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </section>
+
+        <section id="featured-collections" class="animate-section scrollup-animation">
+            <div class="collection-row">
+                <div class="collection-card">
+                    <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2250456/2022/6/15/861c3100-bb97-4d31-9797-fc5a4f52beaf1655291690422-Sonata-Sleek-Men-Black-Analogue-watch-7128NL01-3816552916899-1.jpg" alt="Hottest Wrist Watch">
+                    <div class="card-content">
+                        <h3>THE HOTTEST WRIST WATCH</h3>
+                        <button class="shop-now">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/fd4a77120176015.60acbf9e28614.jpg" alt="World Branded Watch Collection">
+                    <div class="card-content">
+                        <h3>WORLD BRANDED WATCH COLLECTION</h3>
+                        <button class="shop-now">SHOP NOW</button>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-row">
+                <div class="collection-card">
+                    <img src="https://www.sonatawatches.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw569da3aa/images/Sonata/Catalog/SP70028NM01W_1.jpg?sw=360&sh=360" alt="Casual Stainless Steel Watch">
+                    <div class="card-content">
+                        <h3>CASUAL STAINLESS STEEL WATCH</h3>
+                        <button class="shop-now">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <img src="https://www.sonatawatches.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwa931c91c/images/Sonata/Catalog/77105NM09W_1.jpg?sw=800&sh=800" alt="New Luxury Watch Collection">
+                    <div class="card-content">
+                        <h3>NEW LUXURY WATCH COLLECTION</h3>
+                        <button class="shop-now">SHOP NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services" class="animate-section">
+            <div class="service-item">
+                <i class="fas fa-shipping-fast"></i>
+                <span>FREE SHIPPING</span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-piggy-bank"></i>
+                <span>BIG SAVINGS</span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-headset"></i>
+                <span>24/7 SUPPORT</span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-credit-card"></i>
+                <span>FLEXIBLE PAYMENT</span>
+            </div>
+        </section>
+
+        <section id="shop-by-collection" class="animate-section scrollup-animation">
+            <h2>SHOP BY COLLECTION</h2>
+            <div class="collection-grid">
+                <div class="collection-item">
+                    <img src="https://www.sonatawatches.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwc1d27de5/images/Sonata/Catalog/SP80056KM01W_1.jpg?sw=800&sh=800" alt="Women's Collection">
+                    <div class="collection-content">
+                        <h3>WOMEN'S COLLECTION</h3>
+                        <button class="shop-now">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/3/c/tr:h-400,w-300,cm-pad_resize/3c78ed6NF_FRENC00000518_1.jpg?rnd=20200526195200" alt="Smart Watch">
+                    <div class="collection-content">
+                        <h3>SMART WATCH</h3>
+                        <button class="shop-now">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="https://www.sonatawatches.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwa931c91c/images/Sonata/Catalog/77105NM09W_1.jpg?sw=360&sh=360" alt="Men's Collection">
+                    <div class="collection-content">
+                        <h3>MEN'S COLLECTION</h3>
+                        <button class="shop-now">SHOP NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="world-branded" class="animate-section">
+            <h2>WORLD BRANDED WATCH COLLECTIONS</h2>
+            <button class="shop-now">SHOP NOW</button>
+        </section>
+    </main>
+
+    <button id="scroll-to-top" title="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>Sonata Watch Company brings you the finest timepieces from around the world.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#landing-page" class="scroll-link">Home</a></li>
+                    <li><a href="#featured-collections" class="scroll-link">Products</a></li>
+                    <li><a href="#shop-by-collection" class="scroll-link">Collections</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sonata-Team Byte. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
